@@ -13,4 +13,15 @@
         }
         return $cn;
     }
+
+    protected function cni(){
+        $cn='';
+
+        try {
+            $cn=new mysqli('localhost:3306','root','','test');
+        } catch (\Throwable $e) {
+           echo $e->getMessage();
+           die();
+        }
+    }
 }
